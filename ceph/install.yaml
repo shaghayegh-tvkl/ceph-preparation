@@ -1,0 +1,5 @@
+- name: Installing cephadm
+  apt:
+    name: cephadm
+    state: latest
+    update_cache: yes

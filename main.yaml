@@ -34,13 +34,24 @@
 #       include: ./python3.yaml
 # --------------------------------------------------------
 
-- name: Install Packages
+# - name: Install Packages
+#   hosts:
+#     - cephadm-nodes
+#     - ceph-ansible-nodes
+#   remote_user: root
+#   tasks:
+#     - name: Install Packages
+#       include: ./common.yaml
+# --------------------------------------------------------
+
+- name: Install Ceohadm
   hosts:
-    - cephadm-nodes
-    - ceph-ansible-nodes
+    - cephadm-mon-1
   remote_user: root
   tasks:
-    - name: Install Packages
-      include: ./common.yaml
+    - name: Install Cephadm
+      include: ./ceph/install.yaml
+
+      
 
 ...

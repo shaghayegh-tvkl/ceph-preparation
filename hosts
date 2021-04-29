@@ -13,3 +13,6 @@ cephmon-3
 cephosd-1
 cephosd-2
 cephosd-3
+
+[cephadm-mon-1]
+cephmon-1
