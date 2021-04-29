@@ -1,0 +1,5 @@
+- name: Installing with apt
+  apt:
+    name: python3.6
+    state: latest
+    update_cache: yes

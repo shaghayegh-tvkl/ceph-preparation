@@ -1,27 +1,37 @@
 ---
-- name: Configure DNS
-  hosts:
-    - cephadm-nodes
-    - ceph-ansible-nodes
-  remote_user: root
-  tasks:
-    - name: Adding Shecan DNS Nameserver to /etc/resolv.conf
-      include: ./dns.yaml
+# - name: Configure DNS
+#   hosts:
+#     - cephadm-nodes
+#     - ceph-ansible-nodes
+#   remote_user: root
+#   tasks:
+#     - name: Adding Shecan DNS Nameserver to /etc/resolv.conf
+#       include: ./dns.yaml
 
 # --------------------------------------------------------
 
-- name: Install Docker
+# - name: Install Docker
+#   hosts:
+#     - cephadm-nodes
+#   remote_user: root
+#   tasks:
+#     - name: Install Docker on Cephadm Nodes
+#       include: ./docker.yaml
+
+#   handlers:
+#     - name: restart docker
+#       service:
+#         name: docker
+#         state: restarted
+
+# --------------------------------------------------------
+
+- name: Install Python3
   hosts:
     - cephadm-nodes
   remote_user: root
   tasks:
     - name: Install Docker on Cephadm Nodes
-      include: ./docker.yaml
-
-  handlers:
-    - name: restart docker
-      service:
-        name: docker
-        state: restarted
+      include: ./python3.yaml
 
 ...
