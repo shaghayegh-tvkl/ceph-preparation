@@ -6,9 +6,3 @@
 
 - name: move cephadm
   shell: mv cephadm  /usr/local/bin/
-
-- name: add octopus repo
-  shell: cephadm add-repo --release octopus
-
-- name: add octopus repo
-  shell: cephadm install ceph-common
