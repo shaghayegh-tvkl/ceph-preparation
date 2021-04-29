@@ -1,0 +1,15 @@
+[ceph-ansible-nodes]
+cephmon-01
+cephmon-02
+cephmon-03
+cephosd-01
+cephosd-02
+cephosd-03
+
+[cephadm-nodes]
+cephmon-1
+cephmon-2
+cephmon-3
+cephosd-1
+cephosd-2
+cephosd-3
