@@ -44,13 +44,23 @@
 #       include: ./common.yaml
 # --------------------------------------------------------
 
+# - name: Install Ceohadm
+#   hosts:
+#     - cephadm-mon-1
+#   remote_user: root
+#   tasks:
+#     - name: Install Cephadm
+#       include: ./ceph/install.yaml
+
+# --------------------------------------------------------
+
 - name: Install Ceohadm
   hosts:
     - cephadm-mon-1
   remote_user: root
   tasks:
-    - name: Install Cephadm
-      include: ./ceph/install.yaml
+    - name: Bootstrap Cephadm
+      include: ./ceph/bootstrap.yaml
 
       
 
