@@ -1,14 +1,14 @@
-- name: Installing with apt
+- name: Installing software-properties-common
   apt:
     name: software-properties-common
     state: latest
     update_cache: yes
 
-- name: Add nginx stable repository from PPA and install its signing key on Ubuntu target
+- name: Add deadsnakes repository from PPA
   ansible.builtin.apt_repository:
     repo: ppa:deadsnakes/ppa
 
-- name: Installing with apt
+- name: Installing Python3.8
   apt:
     name: python3.8
     state: latest

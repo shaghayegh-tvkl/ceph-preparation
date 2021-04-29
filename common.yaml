@@ -1,0 +1,5 @@
+- name: Install common packages
+  apt:
+    name: [vim,git,bash-completion,wget,curl,chrony]
+    state: present
+    update_cache: yes

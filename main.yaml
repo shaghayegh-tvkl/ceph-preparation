@@ -25,13 +25,22 @@
 #         state: restarted
 
 # --------------------------------------------------------
+# - name: Install Python3
+#   hosts:
+#     - cephadm-nodes
+#   remote_user: root
+#   tasks:
+#     - name: Install Python on Cephadm Nodes
+#       include: ./python3.yaml
+# --------------------------------------------------------
 
-- name: Install Python3
+- name: Install Packages
   hosts:
     - cephadm-nodes
+    - ceph-ansible-nodes
   remote_user: root
   tasks:
-    - name: Install Docker on Cephadm Nodes
-      include: ./python3.yaml
+    - name: Install Packages
+      include: ./common.yaml
 
 ...
