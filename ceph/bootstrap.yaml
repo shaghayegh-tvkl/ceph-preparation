@@ -1,2 +1,0 @@
-- name: Bootstrap Cephadm
-  shell: cephadm bootstrap --mon-ip cephmon-1 --initial-dashboard-user admin --initial-dashboard-password shaghayegh@Admin

@@ -1,8 +1,0 @@
-- name: Curl cephadm
-  shell: curl --silent --remote-name --location https://github.com/ceph/ceph/raw/pacific/src/cephadm/cephadm
-
-- name: chmod cephadm
-  shell: chmod +x cephadm
-
-- name: move cephadm
-  shell: mv cephadm  /usr/local/bin/
